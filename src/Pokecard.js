@@ -1,21 +1,21 @@
-import Pokedex from "./Pokedex"
+import React from 'react';
+import './Pokecard.css';
 
-const BASE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites"+
-"/master/sprites/pokemon/";
+const BASE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites" +
+  "/master/sprites/pokemon/";
 
-
-function Pokecard ({id,name, type, exp}){
-  const image = `${BASE_URL}${id}.png`
+function Pokecard({ id, name, type, exp }) {
+  const image = `${BASE_URL}${id}.png`;
+  //TODO: imageUrl
 
   return (
     <div className="Pokecard">
-      <p> {name} </p>
-      <img src={image}> </img>
-      <p> Type: {type} </p>
-      <p> EXP: {exp} </p>
-
+      <div className="PokecardName"> {name} </div>
+      <img src={image} alt="" />
+      <div>Type: {type} </div>
+      <div>EXP: {exp} </div>
     </div>
-  )
+  );
 }
 
-export default Pokecard
+export default Pokecard;

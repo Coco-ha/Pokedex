@@ -1,4 +1,7 @@
-const pokemons = [
+import React from 'react';
+import Pokedex from './Pokedex';
+
+const pokemonList = [
   {id: 4,   name: 'Charmander', type: 'fire',     base_experience: 62},
   {id: 7,   name: 'Squirtle',   type: 'water',    base_experience: 63},
   {id: 11,  name: 'Metapod',    type: 'bug',      base_experience: 72},
@@ -12,7 +15,7 @@ const pokemons = [
 function App() {
   return (
     <div>
-        <Pokedex pokemon={pokemons} />
+        <Pokedex pokemonList={pokemonList} />
     </div>
   );
 }

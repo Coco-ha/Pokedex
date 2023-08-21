@@ -1,23 +1,19 @@
-import App from "./App"
+import React from 'react';
+import Pokecard from "./Pokecard";
+import './Pokedex.css';
 
-function Pokedex( {pokemon} ){
-
+function Pokedex({ pokemonList }) {
   return (
     <div className="Pokedex">
-      <ul>
-        {pokemon.map(p=>{
-
-            {p.id, p.name, p.type, p.exp}
-
-        })}
-      </ul>
-
-
+      {pokemonList.map(p => (
+        <Pokecard
+          id={p.id}
+          name={p.name}
+          type={p.type}
+          exp={p.base_experience} />
+      ))}
     </div>
-  )
-
-
-
+  );
 }
 
-export default Pokedex
+export default Pokedex;
