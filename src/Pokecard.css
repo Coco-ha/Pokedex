@@ -11,3 +11,12 @@
   color:blue;
   font-weight: bold;
 }
+
+.PokecardName:hover {
+  color: yellow;
+}
+
+.Pokecard:hover {
+  background-color: rgb(50, 50, 50);
+  color: white;
+}

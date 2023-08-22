@@ -15,7 +15,7 @@ const pokemonList = [
 
 function expCount(deck) {
   return deck.reduce((total, pokemon) =>
-    total += pokemon.base_experience,0
+    total += pokemon.base_experience, 0
   );
   // return totalExp;
 
@@ -27,18 +27,18 @@ function Pokegame({ pokemon = pokemonList }) {
 
   let deck1 = shuffledArr.slice(0, 4);
   let deck2 = shuffledArr.slice(4);
-  console.log("DECKS HERE>>>", deck1,deck2)
+  // console.log("DECKS HERE>>>", deck1,deck2)
 
-  let deck1Xp = expCount(deck1)
-  let deck2Xp = expCount(deck2)
-  console.log("EXP HERE>>>>>", deck1Xp,deck2Xp)
+  let deck1Xp = expCount(deck1);
+  let deck2Xp = expCount(deck2);
+  // console.log("EXP HERE>>>>>", deck1Xp,deck2Xp)
   // let winner = deck1Xp > deck2Xp ? deck1 : deck2
 
 
   return (
     <div>
-      <Pokedex pokemonList={deck1} expTotal={deck1Xp} isWinner={deck1Xp>deck2Xp}/>
-      <Pokedex pokemonList={deck2} expTotal={deck2Xp} isWinner={deck2Xp>deck1Xp}/>
+      <Pokedex pokemonList={deck1} expTotal={deck1Xp} isWinner={deck1Xp > deck2Xp} />
+      <Pokedex pokemonList={deck2} expTotal={deck2Xp} isWinner={deck2Xp > deck1Xp} />
     </div>
   );
 }
